@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Site</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    País <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="clicar()">
+     <div id="res"></div>
+
+    <script>
+        function clicar() {
+            var pais = document.getElementById("pais")
+            var res = document.getElementById("res")
+            var ps = pais.value
+            res.innerHTML = `Está vivendo em <strong>${ps}</strong>`
+            if (ps == "Guiné-Bissau") {
+                res.innerHTML += "Tu és guineense"
+            } else {
+                res.innerHTML += "Tu és estrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>
